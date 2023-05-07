@@ -2,163 +2,16 @@
 <html>
 
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
-
-    <style>
-        .container {
-            display: grid;
-            width: 500px;
-            height: auto;
-            grid-template-areas: "Thumb Thumb"
-                "a-z6xVJ-0 a-z6xVJ-1"
-                "a-WPjkr a-WPjkr"
-                "a-nRNn0 a-nRNn0"
-                "a-NO5Qg a-NO5Qg"
-                "a-Rl52m a-Rl52m"
-                "footer footer";
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 386.524822695px auto auto 0px auto auto;
-            background-color: #fff;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #575e75;
-            padding-bottom: 10px
-        }
-
-
-        .Thumb {
-            grid-area: Thumb;
-        }
-
-        .Thumb img {
-            width: 500px
-        }
-
-        .posted {
-            font-size: 11px;
-
-            grid-area: a-z6xVJ-0;
-            background-color: #eaf1fc;
-            text-align: center;
-            padding-top: 4px;
-            padding-bottom: 4px;
-        }
-
-        .last-edited {
-            font-size: 11px;
-            grid-area: a-z6xVJ-1;
-            background-color: #eaf1fc;
-            text-align: center;
-            padding-top: 4px;
-            padding-bottom: 4px;
-        }
-
-        .title {
-            grid-area: a-WPjkr;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 1.75rem;
-            font-weight: 500;
-            padding-left: 10px;
-            padding-top: 4px;
-            margin-top: 10px
-        }
-
-        .author {
-            grid-area: a-nRNn0;
-            padding-left: 10px;
-            font-size: .8rem;
-        }
-
-        .container a {
-            font-weight: bold;
-            text-decoration: none;
-            color: #4d97ff;
-        }
-
-        .stats {
-            margin-top: 40px;
-            grid-area: a-Rl52m;
-            padding-left: 10px;
-            padding-right: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .a-NO5Qg {
-            grid-area: a-NO5Qg;
-            padding-left: 10px;
-
-        }
-
-        .a-NO5Qg h3 {
-            margin-top: 30px;
-            margin-bottom: 0px;
-
-            padding: 12px 5px;
-            font-size: 1rem;
-            font-weight: bold;
-
-        }
-
-        .tag {
-            height: 30px;
-            border-radius: 10px;
-            align-items: center;
-            padding-left: 10px;
-            padding-right: 10px;
-            width: 80px;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            outline: 1.9px solid rgb(66, 66, 66);
-
-
-        }
-
-        .wrap {
-            border: 1px solid rgba(77, 151, 255, .1);
-            border-radius: 8px;
-            background-color: rgba(77, 151, 255, .1);
-            padding: .5rem;
-            overflow: auto;
-            white-space: pre-line;
-            font-size: 1rem;
-            line-height: 1.5rem;
-            overflow-wrap: break-word;
-            display: flex;
-            max-height: 100px;
-            margin-bottom: -20px
-        }
-
-        .footer {
-
-            grid-area: footer;
-            width: 100%;
-            font-size: 10px;
-            text-align: center;
-            margin-top: 10px;
-
-        }
-
-        .footer span {
-            justify-content: center
-        }
-
-        .download {
-            justify-content: flex-end;
-        }
-    </style>
+    <title>css</title>
+    <link rel="stylesheet" type="text/css" href="https://meeeeeeeep1.github.io/scratchProfiles.com/profileCard.css">
 </head>
-
 <body id="body">
+
+    <input id="projectID" type="text" value="466908943" class="projectID" oninput="getUserInfo1(this)" placeholder="Project ID">
+    <h3 id="error"></h3>
+
     <div class="container" id="container">
-        <div class="Thumb"><img id="Thumb"></div>
+        <div class="Thumb"><img id="Thumb" src="" alt="thumbnail"></div>
         <div class="posted"><span id="posted"></span></div>
         <div class="last-edited"><span id="edited"></span></div>
         <div class="title"><span id="title"></span></div>
@@ -166,19 +19,19 @@
         <div class="a-NO5Qg">
             <div id="instructions_box">
 
-            <h3>Instructions:</h3>
-            <div class="wrap">
-                <p id="instructions"></p>
+                <h3>Instructions:</h3>
+                <div class="wrap">
+                    <p id="instructions"></p>
+                </div>
             </div>
-        </div>
 
             <div id="notes_box">
-            <h3>Notes and Credits:</h3>
-            <div class="wrap">
-                <p id="notes"></p>
+                <h3>Notes and Credits:</h3>
+                <div class="wrap">
+                    <p id="notes"></p>
+                </div>
             </div>
         </div>
-       </div>
         <div class="stats">
             <div class="tag" style="background-color: #ffa2b2;"><img
                     src="https://scratch.mit.edu/svgs/project/love-red.svg" alt="Loves: "><span id="loves"></span></div>
@@ -192,66 +45,73 @@
         <div class="footer"><span>Made by <a href="https://scratch.mit.edu/users/fictioneer/">Haven</a> | Thank you to
                 <a href="https://scratch.mit.edu/users/DatOneLefty/">DatOneLefty</a> for <a
                     href="https://scratchdb.lefty.one/v3/docs/">ScratchDB</a></span><br> <button class="download"
-                onclick="download()" id="download1">Download</button></div>
-    </div><p>HELLO</p>
+                style="display: none;" onclick="download()" id="download1">Download</button></div>
+    </div>
     <br>
-    <input id="input" type="text" value="466908943" oninput="getUserInfo()">
     <script>
+        getUserInfo(466908943);
+        function getUserInfo1(textbox) {
+            getUserInfo(textbox.value);
 
-  <script>
-    window.location.href = '/scratchProfiles.com/#' + window.location.pathname.replace('/scratchProfiles.com/', '')
-        var output = {};
-        getUserInfo();
-
-        function getUserInfo() {  window.onload = function() {
-    var url = window.location.href;
-    var urlParts = url.split("/");
-    var id = urlParts[urlParts.length - 1];
-    if (id === "") {
-      id = "default";
-    }
-  }
-
+        }
+        function getUserInfo(value) {
+            var output = {};
+            var id = value;
             var httpRequest = new XMLHttpRequest();
             httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+                if (httpRequest.readyState === 4) {
 
                     output = JSON.parse(httpRequest.responseText);
-                    if (output.error === "post not found" || output.error === "invalid project id, must be a whole number >= 0") {
+                    var error = output.error;
+                    console.log(error);
+
+                    if (error === "post not found") {
                         document.getElementById("container").style.display = "none";
+                        document.getElementById("error").innerHTML = "Project Not Found";
+                        document.getElementById("error").style.display = "block";
 
                     } else {
-                        document.getElementById("posted").innerHTML = "Posted on " + output.times.shared;
-                        document.getElementById("edited").innerHTML = "Last edited on " + output.times.modified;
-                        document.getElementById("title").innerHTML = output.title;
-                        document.getElementById("author").innerHTML = output.username;
-                        document.getElementById("author").href = "https://scratch.mit.edu/users/" + output.username + "/";
-                        document.getElementById("loves").innerHTML = " " + output.statistics.loves;
-                        document.getElementById("stars").innerHTML = " " + output.statistics.favorites;
-                        document.getElementById("views").innerHTML = " " + output.statistics.views;
-                        if (output.instructions === "") {
-                            document.getElementById("instructions_box").style.display = "none";
+                        if (output.error === "invalid project id, must be a whole number >= 0") {
+                            document.getElementById("container").style.display = "none";
+                            document.getElementById("error").innerHTML = "Invalid Project ID";
 
                         } else {
-                            document.getElementById("instructions").textContent = output.instructions;
-                        }
-                        if (output.description === "") {
-                            document.getElementById("notes_box").style.display = "none";
+                            if (httpRequest.status === 200) {
+                                document.getElementById("container").style.display = "block";
+                                document.getElementById("error").style.display = "none";
 
-                        } else {
-                            document.getElementById("notes").textContent = output.description;
+                                document.getElementById("posted").innerHTML = "Posted on " + output.times.shared;
+                                document.getElementById("edited").innerHTML = "Last edited on " + output.times.modified;
+                                document.getElementById("title").innerHTML = output.title;
+                                document.getElementById("author").innerHTML = output.username;
+                                document.getElementById("author").href = "https://scratch.mit.edu/users/" + output.username + "/";
+                                document.getElementById("loves").innerHTML = " " + output.statistics.loves;
+                                document.getElementById("stars").innerHTML = " " + output.statistics.favorites;
+                                document.getElementById("views").innerHTML = " " + output.statistics.views;
+                                var image = "https://uploads.scratch.mit.edu/get_image/project/" + id + "_282x218.png?v=1682343747";
+                                document.getElementById("Thumb").src = image;
+                                if (output.instructions === "") {
+                                    document.getElementById("instructions_box").style.display = "none";
+
+                                } else {
+                                    document.getElementById("instructions").textContent = output.instructions;
+                                }
+                                if (output.description === "") {
+                                    document.getElementById("notes_box").style.display = "none";
+
+                                } else {
+                                    document.getElementById("notes").textContent = output.description;
+                                }
+                            }
                         }
                     }
-
-
                 }
             };
             httpRequest.open("GET", "https://scratchdb.lefty.one/v3/project/info/" + id, true);
             httpRequest.send();
         }
 
-        var image = "https://cdn2.scratch.mit.edu/get_image/project/" + id + "_282x218.png?v=1682528384";
-        document.getElementById("Thumb").src = image;
+
 
         function download() {
             // Get the container element
