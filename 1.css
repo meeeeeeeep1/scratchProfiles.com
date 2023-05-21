@@ -1,0 +1,274 @@
+       body {
+            background-color: #fcfcfc;
+            font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+            color: rgb(64, 70, 88);
+        }
+
+        .user {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 500px;
+            border: 1px solid #d9d9d9;
+        }
+
+        .header {
+            border-bottom: 1px solid #d9d9d9;
+            height: auto;
+            width: 500px;
+
+        }
+
+        .banner {
+            background-color: #ffbf00;
+            height: 150px;
+
+
+        }
+
+        #pfp {
+            position: absolute;
+            margin-left: 40px;
+            border-radius: 200px;
+            height: 125px;
+            top: 80px;
+            outline: 5px solid rgb(64, 70, 88);
+        }
+
+        .header .basic h1 {
+            margin-top: 60px;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 34px;
+        }
+
+        .header .basic p {
+            margin-left: 10px;
+            margin-top: -20px;
+            color: rgb(118, 124, 143);
+            font-size: 15px;
+        }
+
+        .stats .row {
+            font-style: italic;
+            color: #767c8f;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            line-height: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+
+        .stats {
+            margin: 0px 20px;
+
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+        }
+
+        .row img {
+            width: 15px;
+            color: #767c8f;
+            margin-right: 5px;
+        }
+
+        .row a {
+            color: #767c8f;
+            text-decoration: underline;
+
+        }
+
+        .row .id {
+            margin-right: 0px;
+        }
+
+        .row b {
+            font-weight: bolder;
+        }
+
+        .header .description {
+            margin: 0px 10px;
+        }
+
+        .header .description h3 {
+            font-weight: 700;
+            margin-bottom: -7px;
+        }
+
+        .header .description #aboutTitle {
+            margin-top: 20px;
+        }
+
+        .header .description .desc {
+            color: #767c8f;
+
+        }
+
+        .tab {
+
+            overflow: hidden;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            width: 100%;
+
+
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #0000000c;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            border-bottom: 5px solid #4d97ff;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .tab {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .project {
+            height: auto;
+            padding-top: 2px;
+            color: rgb(87, 94, 117);
+            margin: 7px;
+            border-radius: 4px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding-bottom: 4px;
+            width: 220px;
+            padding-bottom: 10px;
+        }
+
+        .project .project_info {
+            padding-left: 10px;
+        }
+
+        .project h3 {
+            font-size: 1.6rem;
+            font-weight: normal;
+            margin-top: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-bottom: 0px;
+
+
+        }
+
+        .project a {
+            color: rgb(64, 70, 88);
+            text-decoration: none;
+        }
+
+        .project img {
+            height: 152px;
+            margin: 5px 8px 8px auto;
+            width: 204px;
+            display: block;
+            border-radius: 4px;
+            color: #ff0000
+        }
+
+        .projectsGrid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+        }
+.forumPostGrid {
+    display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(20, auto); 
+}
+        .userActivity {
+            padding-top: 10px;
+
+            width: 100%;
+            border-bottom: 1px solid #d9d9d9;
+            height: 50px;
+            display: inline-block;
+        }
+
+        .userActivity #activityText {
+            font-size: 20px;
+        }
+
+        .userActivity #activityTime {
+            font-style: italic;
+            color: #767c8f;
+        }
+        .forumPost {
+                    border: 1px solid #d9d9d9;
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: 1fr;
+                }
+.forumPost .postHead .title {
+    margin-bottom: -13px;
+}
+.forumPost .postHead .title{
+    font-weight: lighter;
+}
+.forumPost .category {
+    margin-bottom: 3px;
+}
+   
+.forumPost .postContent {
+    margin-left: 10px;
+    color:rgb(86, 89, 105);
+    margin-bottom: 10px;
+}
+.forumPost .dates {
+color:rgb(118, 124, 143);
+font-size: 12px
+}
+
+.forumPost .messageType {
+color:rgb(118, 124, 143);
+font-size: 14px;
+position: absolute;
+right: 30px;
+margin-top: 13px;
+}
+
+.forumPost .postHead {
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 20px;
+}
+.forumPost .postHead img {
+height: 40px;
+margin-right: 10px;
+border-radius: 10px;
+}
