@@ -6,5 +6,19 @@
   </head>
   <body>
   HI!!!
+          <ul id="links-list"></ul>
   </body>
+    <script>const linksList = document.getElementById("links-list");
+
+for (let i = 1; i <= 1000; i++) {
+    const link = document.createElement("a");
+    link.href = `https://meeeeeeeep1.github.io/scratchProfiles.com/app/${i}`; // Customize the URL pattern as needed
+    link.textContent = `Link ${i}`;
+
+    const listItem = document.createElement("li");
+    listItem.appendChild(link);
+
+    linksList.appendChild(listItem);
+}
+</script>
 </html>
